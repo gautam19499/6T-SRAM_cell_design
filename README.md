@@ -1,0 +1,102 @@
+#  Design and Simulation of 6-T SRAM cell design. 
+## Table Of Contents :
+ - [Overview](#Overview)
+ - [Sizing](#Sizing)
+ - [DC Analysis](#Audio)
+ - [SNM](#Circuit_PCG)
+     - [Hold SNM](#Parameters_PCG)
+     - [Read SNM](#Read_SNM)
+     - [Write SNM](#Write_SNM)
+ - [Acknowledgments](#Acknowledgements)
+ - [Contact Information](#Contact_Information)
+ 
+---
+## Overview
+This project mainly focuses on the design of 1K * 32 bit 6-T SRAM memory design.
+Specifications:
+ - Memory size - 1K * 32 bit
+ - Supply Voltage - 5V
+ - Technology - 0.5um SCMOS Technology
+
+---
+## Sizing
+Typical MOS Parameters:
+-   Vdd = 5V
+-   Lmin = 0.4um
+-   Wmin = 0.6um
+-   Vtn = 0.49V (NMOS threshold voltage)
+-   Vtp = -0.66V (PMOS threshold voltage)
+-   un = 445 cm^2/Vs (NMOS mobility)
+-   up = 151 cm^2/Vs (PMOS mobility)
+
+A schematic diagram of a standard 6-T SRAM cell is given below:
+![6-T SRAM cell](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/6-T%20SRAM%20cell.jpg)
+
+### Read Operation:
+Assuming logic 0 is stored in the cell i.e, V1=0V & V2=5V.
+WL is connected to Vdd.
+Transistor Region of Operation:
+
+-   M1  Linear Region  
+-   M2  Cutoff Region
+-   M3  Saturation Region
+-   M4  Cutoff Region
+-   M5  Cutoff Region
+-   M6  Linear Region
+
+The data read operation should not destroy the stored information.
+
+The key design issue for the data-read operation is to guarantee that the voltage V1, does not exceed the threshold voltage of M2 so that the transistor M2 remains turned off during the read phase, i.e., V1 ≤ Vtn.
+Now to maintain the stored data and considering the design constraint we can say that M1 should be stronger than M3.
+
+After solving the Id equation for M1 and M3 we get (Eq 1):
+![Eq-1](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-1.jpeg)
+
+### Write Operation:
+Assuming logic 1 is stored in the cell i.e, V1=5V & V2=0.
+WL is connected to Vdd.
+BL = 0V & BLB = 5V. (Means we are trying to write logic 0 in the cell.)
+
+Transistor Region of Operation:
+
+-   M1  Cutoff Region
+-   M2  Linear Region
+-   M3  Saturation Region
+-   M4  Saturation Region
+-   M5  Linear Region
+-   M6  Cutoff Region
+
+The cell should allow modification of the stored information.
+To change the stored information, i.e., to force V1 to 0 V, and V2 to Vdd, the
+node voltage V1, must be reduced below  the threshold voltage of M2 so that M2 turns off first.
+Now to modify the stored data and considering the design constraint we can say that M3 should be stronger than M5.
+After solving the Id equation for M3 and M5 we get:
+![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-2.jpeg)
+
+Note: When circuit starts operating, and V1 node reaches to Vtn voltage then M3 will be in linear and M5 will be in saturation region.
+Now using typical MOS parameters as given above and taking V1=Vtn=0.49V and L=0.4um (for all MOS).
+
+From Eq -2 we get:
+![Eq-3](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-3.jpeg)
+
+From Eq - 1 we get:
+![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-4.jpeg)
+
+Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 > M5**)
+Then **W₃ = 1um** and **W₁ = 3.9um**.
+
+---
+
+## Acknowledgements
+
+ -   Dr.Saroj Rout,Associate Professor,Silicon Institute Of Technology,Bhubaneswar
+-   Mr.Santunu Sarangi,Assistant Professor,Silicon Institute Of Technology,Bhubaneswar
+
+---
+## Contact_Information
+
+ - Gautam Kumar, Design Engineer, [Sevya Multimedia Technologies Pvt. Ltd.](https://sevyamultimedia.com/)
+ - gautamkumar99342@gmail.com
+
+
+
