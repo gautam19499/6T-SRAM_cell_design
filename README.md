@@ -1,4 +1,4 @@
-#  Design and Simulation of 6-T SRAM cell design. 
+#  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
  - [Sizing](#Sizing)
@@ -12,7 +12,7 @@
  
 ---
 ## Overview
-This project mainly focuses on the design of 1K * 32 bit 6-T SRAM memory design.
+This project mainly focuses on the design of 1K * 32 bit 6T-SRAM memory design.
 Specifications:
  - Memory size - 1K * 32 bit
  - Supply Voltage - 5V
