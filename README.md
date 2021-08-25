@@ -30,7 +30,7 @@ Typical MOS Parameters:
 -   up = 151 cm^2/Vs (PMOS mobility)
 
 A schematic diagram of a standard 6-T SRAM cell is given below:
-![6-T SRAM cell](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/6-T%20SRAM%20cell.jpg)
+![6-T SRAM cell](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/6-T%20SRAM%20cell.jpg)
 
 ### Read Operation:
 Assuming logic 0 is stored in the cell i.e, V1=0V & V2=5V.
@@ -50,7 +50,7 @@ The key design issue for the data-read operation is to guarantee that the voltag
 Now to maintain the stored data and considering the design constraint we can say that M1 should be stronger than M3.
 
 After solving the Id equation for M1 and M3 we get (Eq 1):
-![Eq-1](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-1.jpeg)
+![Eq-1](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-1.jpeg)
 
 ### Write Operation:
 Assuming logic 1 is stored in the cell i.e, V1=5V & V2=0.
@@ -71,18 +71,18 @@ To change the stored information, i.e., to force V1 to 0 V, and V2 to Vdd, the
 node voltage V1, must be reduced below  the threshold voltage of M2 so that M2 turns off first.
 Now to modify the stored data and considering the design constraint we can say that M3 should be stronger than M5.
 After solving the Id equation for M3 and M5 we get (Eq-2):
-![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-2.jpeg)
+![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-2.jpeg)
 
 Note: When circuit starts operating, and V1 node reaches to Vtn voltage then M3 will be in linear and M5 will be in saturation region.
 Now using typical MOS parameters as given above and taking V1=Vtn=0.49V and L=0.4um (for all MOS).
 
 From Eq -2 we get:
 
-![Eq-3](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-3.jpeg)
+![Eq-3](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-3.jpeg)
 
 From Eq - 1 we get:
 
-![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-4.jpeg)
+![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-4.jpeg)
 
 Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 > M5**).
 
@@ -92,7 +92,7 @@ Then **W₃ = 1um** and **W₁ = 3.9um**.
 ## DC_Analysis
 Voltage Transfer Characteristic (VTC) of Inverter:
 
-![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/VTC_inverter.jpeg)
+![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/VTC_inverter.jpeg)
 
 Here the supply voltage = 5V.
 And we get the switching threshold (Vth) of the inverter = 1.09V.
@@ -108,19 +108,19 @@ The stability and writability of the cell is addressed by the:
  The SNM measures how much noise can be applied to the inputs of the two cross coupled inverters before a stable state is lost.
  It is the least noise voltage needed to change the cell state.
  
-[SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/SNM.pdf).
+[SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/docs/SNM.pdf).
 
 ### Hold_SNM
 
-![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/HSNM.jpeg)
+![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg)
 
 ### Read_SNM
 
-![RSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/RSNM.jpeg)
+![RSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/RSNM.jpeg)
 
 ### Write_SNM
 
-![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/WSNM.jpeg)
+![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/WSNM.jpeg)
 
 ---
 ## Acknowledgements
