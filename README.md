@@ -2,9 +2,9 @@
 ## Table Of Contents :
  - [Overview](#Overview)
  - [Sizing](#Sizing)
- - [DC Analysis](#Audio)
- - [SNM](#Circuit_PCG)
-     - [Hold SNM](#Parameters_PCG)
+ - [DC Analysis](#DC_Analysis)
+ - [SNM](#SNM)
+     - [Hold SNM](#Hold_SNM)
      - [Read SNM](#Read_SNM)
      - [Write SNM](#Write_SNM)
  - [Acknowledgments](#Acknowledgements)
@@ -70,7 +70,7 @@ The cell should allow modification of the stored information.
 To change the stored information, i.e., to force V1 to 0 V, and V2 to Vdd, the
 node voltage V1, must be reduced below  the threshold voltage of M2 so that M2 turns off first.
 Now to modify the stored data and considering the design constraint we can say that M3 should be stronger than M5.
-After solving the Id equation for M3 and M5 we get:
+After solving the Id equation for M3 and M5 we get (Eq-2):
 ![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-2.jpeg)
 
 Note: When circuit starts operating, and V1 node reaches to Vtn voltage then M3 will be in linear and M5 will be in saturation region.
@@ -89,7 +89,37 @@ Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 
 Then **W₃ = 1um** and **W₁ = 3.9um**.
 
 ---
+## DC_Analysis
+Voltage Transfer Characteristic (VTC) of Inverter:
 
+![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/VTC_inverter.jpeg)
+Here the supply voltage = 5V.
+And we get the switching threshold (Vth) of the inverter = 1.09V.
+
+---
+## SNM
+The stability and writability of the cell is addressed by the:
+ - Hold Margin
+ - Read Margin
+ - Write Margin
+ which are determined by Static Noise Margin (SNM) of the cell in its various modes of operation (i.e. Hold, Read & Write).
+ The SNM measures how much noise can be applied to the inputs of the two cross coupled inverters before a stable state is lost.
+ It is the least noise voltage needed to change the cell state.
+[SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/SNM.pdf).
+
+### Hold_SNM
+
+![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/HSNM.jpeg)
+
+### Read_SNM
+
+![RSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/RSNM.jpeg)
+
+### Write_SNM
+
+![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/WSNM.jpeg)
+
+---
 ## Acknowledgements
 
  -   Dr.Saroj Rout,Associate Professor,Silicon Institute Of Technology,Bhubaneswar
