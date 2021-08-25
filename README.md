@@ -75,6 +75,7 @@ After solving the Id equation for M3 and M5 we get:
 
 Note: When circuit starts operating, and V1 node reaches to Vtn voltage then M3 will be in linear and M5 will be in saturation region.
 Now using typical MOS parameters as given above and taking V1=Vtn=0.49V and L=0.4um (for all MOS).
+
 From Eq -2 we get:
 
 ![Eq-3](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-3.jpeg)
@@ -83,7 +84,8 @@ From Eq - 1 we get:
 
 ![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/Eq-4.jpeg)
 
-Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 > M5**)
+Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 > M5**).
+
 Then **W₃ = 1um** and **W₁ = 3.9um**.
 
 ---
