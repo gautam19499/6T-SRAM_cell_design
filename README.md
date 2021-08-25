@@ -93,6 +93,7 @@ Then **W₃ = 1um** and **W₁ = 3.9um**.
 Voltage Transfer Characteristic (VTC) of Inverter:
 
 ![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/VTC_inverter.jpeg)
+
 Here the supply voltage = 5V.
 And we get the switching threshold (Vth) of the inverter = 1.09V.
 
@@ -102,9 +103,11 @@ The stability and writability of the cell is addressed by the:
  - Hold Margin
  - Read Margin
  - Write Margin
+ 
  which are determined by Static Noise Margin (SNM) of the cell in its various modes of operation (i.e. Hold, Read & Write).
  The SNM measures how much noise can be applied to the inputs of the two cross coupled inverters before a stable state is lost.
  It is the least noise voltage needed to change the cell state.
+ 
 [SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/SNM.pdf).
 
 ### Hold_SNM
