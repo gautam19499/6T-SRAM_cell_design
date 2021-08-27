@@ -14,6 +14,7 @@
 ---
 ## Overview
 This project mainly focuses on the design of 1K * 32 bit 6T-SRAM memory design.
+
 Specifications:
  - Memory size - 1K * 32 bit
  - Supply Voltage - 5V
