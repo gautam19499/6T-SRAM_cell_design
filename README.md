@@ -1,6 +1,7 @@
 #  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
+ - [Block Diagram](#Block_Diagram)
  - [Sizing](#Sizing)
  - [DC Analysis](#DC_Analysis)
  - [SNM](#SNM)
@@ -17,6 +18,10 @@ Specifications:
  - Memory size - 1K * 32 bit
  - Supply Voltage - 5V
  - Technology - 0.5um SCMOS Technology
+---
+## Block_Diagram
+
+![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/SRAM%20Block%20diagram.jpg)
 
 ---
 ## Sizing
