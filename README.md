@@ -8,6 +8,9 @@
      - [Hold SNM](#Hold_SNM)
      - [Read SNM](#Read_SNM)
      - [Write SNM](#Write_SNM)
+ - [Transient Analysis](#Transient_Analysis)
+ - [Sense Amplifier](#Sense_Amplifier)
+ - [Write Driver](#Write_Driver)
  - [Acknowledgments](#Acknowledgements)
  - [Contact Information](#Contact_Information)
  
@@ -127,6 +130,25 @@ The stability and writability of the cell is addressed by the:
 ### Write_SNM
 
 ![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/WSNM.jpeg)
+
+---
+## Transient_Analysis
+
+![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/6T-cell_parasitics.jpeg)
+
+The above circuit consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
+Here for M12 and M13  m=255. 
+For M10 and M11 m=127.
+
+![Transient simulation with all parasitics.](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_with_parasitics.jpeg)   
+
+
+---
+## Sense_Amplifier
+
+---
+## Write_Driver
+
 
 ---
 ## Acknowledgements
