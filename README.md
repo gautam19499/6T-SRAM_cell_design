@@ -25,7 +25,7 @@ Specifications:
 ---
 ## Block_Diagram
 
-![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/SRAM%20Block%20diagram.jpg)
+![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/SRAM%20Block%20Diagram2.jpg)
 
 ---
 ## Sizing
@@ -136,7 +136,6 @@ The stability and writability of the cell is addressed by the:
 
 ![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/6T-cell_parasitics.jpeg)
 
-
 The above circuit consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
 Here for M12 and M13  m=255. 
 For M10 and M11 m=127.
@@ -150,9 +149,7 @@ For M10 and M11 m=127.
 
 ![sense_amplifier](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/sense_amp.jpeg)
 
-
 It is a differential amplifier used to sense the voltage difference between the bit-lines of a memory cell while a read operation is performed. It is needed in the circuit because the 6T-cell as being small sized not able to drive the large load capacitance appearing at the bit lines.
-
 
 
 ![tran_sense_amp](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_sense_amp.jpeg)
@@ -164,9 +161,7 @@ It is a differential amplifier used to sense the voltage difference between the 
 ![Write Driver](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_driver.jpeg)
 
 
-
 The write drivers send the input data signals onto the bit-lines for a write operation.
-
 
 
 ![Transient analysis with sense amplifier and write driver.](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_write_driver.jpeg)
