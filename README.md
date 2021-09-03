@@ -1,10 +1,9 @@
+
 #  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
- - [Block Diagram](#Block_Diagram)
- - [Sizing](#Sizing)
- - [DC Analysis](#DC_Analysis)
- - [SNM](#SNM)
+ - [Design of 6T cell](#Design_of_6T_Cell)
+ - [DC Analysis 6T cell](#DC_Analysis_of_6T_Cell)
      - [Hold SNM](#Hold_SNM)
      - [Read SNM](#Read_SNM)
      - [Write SNM](#Write_SNM)
@@ -16,34 +15,26 @@
  
 ---
 ## Overview
-This project mainly focuses on the design of 1K * 32 bit 6T-SRAM memory design.
 
-Specifications:
- - Memory size - 1K * 32 bit
- - Supply Voltage - 5V
- - Technology - 0.5um SCMOS Technology
----
-## Block_Diagram
 
-![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/SRAM%20Block%20Diagram2.jpg)
+![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new.jpeg)
+
+
+This project mainly focuses on the design and simulation of 6T SRAM cell.
+The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology
+Here according to the row and column address one of the wordline and one of the column will get selected, which will give access to one of the 6T cell in the respective column. For thid 6T cell we did the simulation for read, write operation, checked the noise margin in Hold, Read and Write states.
 
 ---
-## Sizing
-Typical MOS Parameters:
--   Vdd = 5V
--   Lmin = 0.4um
--   Wmin = 0.6um
--   Vtn = 0.49V (NMOS threshold voltage)
--   Vtp = -0.66V (PMOS threshold voltage)
--   un = 445 cm^2/Vs (NMOS mobility)
--   up = 151 cm^2/Vs (PMOS mobility)
-
-A schematic diagram of a standard 6-T SRAM cell is given below:
-![6-T SRAM cell](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/6-T%20SRAM%20cell.jpg)
+## Design_of_6T_Cell
+6T cell consists of two back to back connected inverters and two access transistors. For the design of 6T cell first we need to understand the operation and behaviour of the 6 transistors involved in the design. 
+ 1. Read Operation
+ 2. Write Operation
 
 ### Read Operation:
+
+![read_operation](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/read_operation-Page-1.jpg)
+
 Assuming logic 0 is stored in the cell i.e, V1=0V & V2=5V.
-WL is connected to Vdd.
 Transistor Region of Operation:
 
 -   M1  Linear Region  
@@ -62,6 +53,9 @@ After solving the Id equation for M1 and M3 we get (Eq 1):
 ![Eq-1](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-1.jpeg)
 
 ### Write Operation:
+
+![enter image description here](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_operation-Page-2.jpg)
+
 Assuming logic 1 is stored in the cell i.e, V1=5V & V2=0.
 WL is connected to Vdd.
 BL = 0V & BLB = 5V. (Means we are trying to write logic 0 in the cell.)
@@ -82,46 +76,27 @@ Now to modify the stored data and considering the design constraint we can say t
 After solving the Id equation for M3 and M5 we get (Eq-2):
 ![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-2.jpeg)
 
-Note: When circuit starts operating, and V1 node reaches to Vtn voltage then M3 will be in linear and M5 will be in saturation region.
-Now using typical MOS parameters as given above and taking V1=Vtn=0.49V and L=0.4um (for all MOS).
-
-From Eq -2 we get:
-
-![Eq-3](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-3.jpeg)
-
-From Eq - 1 we get:
-
-![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-4.jpeg)
-
-Taking **W₅ = 0.6um** (since from above analysis we get strength of **M1 > M3 > M5**).
-
-Then **W₃ = 1um** and **W₁ = 3.9um**.
+For sizing data [click here](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/docs/6T_sizing.pdf).
 
 ---
-## DC_Analysis
-Voltage Transfer Characteristic (VTC) of Inverter:
-
-![Eq-4](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/VTC_inverter.jpeg)
-
-Here the supply voltage = 5V.
-And we get the switching threshold (Vth) of the inverter = 1.09V.
-
----
-## SNM
+## DC_Analysis_of_6T_Cell
 The stability and writability of the cell is addressed by the:
  - Hold Margin
  - Read Margin
  - Write Margin
  
- which are determined by Static Noise Margin (SNM) of the cell in its various modes of operation (i.e. Hold, Read & Write).
+ which are determined by **Static Noise Margin (SNM)** of the cell in its various modes of operation (i.e. Hold, Read & Write).
  The SNM measures how much noise can be applied to the inputs of the two cross coupled inverters before a stable state is lost.
  It is the least noise voltage needed to change the cell state.
  
 [SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/docs/SNM.pdf).
 
 ### Hold_SNM
+| ![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg) | ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) |
 
-![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg)
+
+
+
 
 ### Read_SNM
 
