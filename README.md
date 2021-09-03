@@ -92,24 +92,40 @@ The stability and writability of the cell is addressed by the:
 [SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/docs/SNM.pdf).
 
 ### Hold_SNM
-![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg) ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) 
 
+![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg)
 
+The Schematic for determining Static Noise Margin in Hold Mode.
+ ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) 
+
+SNM curve for 6T in hold mode.
 
 
 
 ### Read_SNM
 
+![Schematic for RSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_RSNM.jpeg)
+
+The Schematic for determining Static Noise Margin in Read Mode.
+
 ![RSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/RSNM.jpeg)
+
+SNM curve for 6T in Read mode.
 
 ### Write_SNM
 
+![Schematic for WSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_WSNM.jpeg)
+
+The Schematic for determining Static Noise Margin in Write Mode.
+
 ![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/WSNM.jpeg)
+
+SNM curve for 6T in Write mode.
 
 ---
 ## Transient_Analysis
 
-![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/6T-cell_parasitics.jpeg)
+![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/6T-cell_parasitics_new.jpeg)
 
 The above circuit consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
 Here for M12 and M13  m=255. 
