@@ -21,7 +21,7 @@
 
 
 This project mainly focuses on the design and simulation of 6T SRAM cell.
-The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology
+The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology. 
 Here according to the row and column address one of the wordline and one of the column will get selected, which will give access to one of the 6T cell in the respective column. For thid 6T cell we did the simulation for read, write operation, checked the noise margin in Hold, Read and Write states.
 
 ---
@@ -92,7 +92,7 @@ The stability and writability of the cell is addressed by the:
 [SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/docs/SNM.pdf).
 
 ### Hold_SNM
-| ![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg) | ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) |
+![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg) ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) 
 
 
 
