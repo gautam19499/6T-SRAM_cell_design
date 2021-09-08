@@ -17,7 +17,7 @@
 ## Overview
 
 
-![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new1.jpeg)
+![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new.jpeg)
 
 
 This project mainly focuses on the design and simulation of 6T SRAM cell.
