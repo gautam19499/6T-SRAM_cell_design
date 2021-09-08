@@ -17,7 +17,7 @@
 ## Overview
 
 
-![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png)
+![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new1.jpeg)
 
 
 This project mainly focuses on the design and simulation of 6T SRAM cell.
@@ -93,13 +93,7 @@ The stability and writability of the cell is addressed by the:
 
 ### Hold_SNM
 
-![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_HSNM.jpeg)
-
-The Schematic for determining Static Noise Margin in Hold Mode.
- ![HSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/HSNM.jpeg) 
-
-SNM curve for 6T in hold mode.
-
+![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new.jpeg)
 
 
 ### Read_SNM
