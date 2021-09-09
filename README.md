@@ -93,7 +93,7 @@ The stability and writability of the cell is addressed by the:
 
 ### Hold_SNM
 
-![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new.jpeg)
+![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new1.jpeg)
 
 
 ### Read_SNM
