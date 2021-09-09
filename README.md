@@ -98,23 +98,13 @@ The stability and writability of the cell is addressed by the:
 
 ### Read_SNM
 
-![Schematic for RSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_RSNM.jpeg)
+![Schematic for RSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/RSNM_new.jpeg)
 
-The Schematic for determining Static Noise Margin in Read Mode.
-
-![RSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/RSNM.jpeg)
-
-SNM curve for 6T in Read mode.
 
 ### Write_SNM
 
-![Schematic for WSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/Schematic_WSNM.jpeg)
+![Schematic for WSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/WSNM_new.jpeg)
 
-The Schematic for determining Static Noise Margin in Write Mode.
-
-![WSNM](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/WSNM.jpeg)
-
-SNM curve for 6T in Write mode.
 
 ---
 ## Transient_Analysis
