@@ -2,6 +2,7 @@
 #  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
+ - [SRAM Array and Peripheral circuits](#SRAM_Array_and_Peripheral_Circuits)
  - [Design of 6T cell](#Design_of_6T_Cell)
  - [DC Analysis 6T cell](#6T_SRAM_Stability)
      - [Hold SNM](#Hold_SNM)
@@ -9,15 +10,19 @@
      - [Write SNM](#Write_SNM)
  - [SRAM Timing  Analysis](#SRAM_Timing_Analysis)
  - [Timing Analysis with Sense Amplifier](#Timing_Analysis_with_Sense_Amplifier)
- - [Timing Analysis with Write Driver](#Timing_Analysis_with_ Write_Driver)
+ - [Timing Analysis with Write Driver](#Timing_Analysis_with_Write_Driver)
  - [Acknowledgments](#Acknowledgements)
  - [Contact Information](#Contact_Information)
  
 ---
 ## Overview
 This project mainly focuses on the design and simulation of 6T SRAM cell.
-The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology. 
-Here according to the row and column address one of the wordline and one of the column will get selected, which will give access to one of the 6T cell in the respective column. For this 6T cell we did the simulation for read, write operation, checked the noise margin in Hold, Read and Write states.
+
+ Specifications:
+ - Memory size - 1K * 32 bit
+ - Supply Voltage - 5V
+ - Technology - 0.5um SCMOS Technology
+
 
 
 ---
@@ -101,6 +106,7 @@ The stability and writability of the cell is addressed by the:
 ![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new2.jpeg)
 
 The above diagram contains the schematic and plot of the SRAM cell in Hold Mode.
+
 Hold SNM is the side of the largest square nested inside the butterfly curve.
 
 ### Read_SNM
@@ -109,7 +115,9 @@ Hold SNM is the side of the largest square nested inside the butterfly curve.
 
 
 The above diagram contains the schematic and plot of the SRAM cell in Read Mode. 
+
 Read SNM is the side of the largest square nested inside the butterfly curve. 
+
 Read SNM is smaller than the Hold SNM because low level is raised by the access transistors.
 
 ### Write_SNM
@@ -136,6 +144,7 @@ For M10 and M11 m=127.
 ![sense_amplifier](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_sense.jpeg)
 
 The above diagram contains the schematic and plot of the SRAM cell with [sense amplifier circuit](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/sense_amp.jpeg). 
+
 Sense Amplifier is a differential amplifier used to sense the voltage difference between the bit-lines of a memory cell while a read operation is performed. It is needed in the circuit because the 6T-cell as being small sized not able to drive the large load capacitance appearing at the bit lines.
 
 
