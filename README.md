@@ -3,26 +3,31 @@
 ## Table Of Contents :
  - [Overview](#Overview)
  - [Design of 6T cell](#Design_of_6T_Cell)
- - [DC Analysis 6T cell](#DC_Analysis_of_6T_Cell)
+ - [DC Analysis 6T cell](#6T_SRAM_Stability)
      - [Hold SNM](#Hold_SNM)
      - [Read SNM](#Read_SNM)
      - [Write SNM](#Write_SNM)
- - [Transient Analysis](#Transient_Analysis)
- - [Sense Amplifier](#Sense_Amplifier)
- - [Write Driver](#Write_Driver)
+ - [SRAM Timing  Analysis](#SRAM_Timing_Analysis)
+ - [Timing Analysis with Sense Amplifier](#Timing_Analysis_with_Sense_Amplifier)
+ - [Timing Analysis with Write Driver](#Timing_Analysis_with_ Write_Driver)
  - [Acknowledgments](#Acknowledgements)
  - [Contact Information](#Contact_Information)
  
 ---
 ## Overview
+This project mainly focuses on the design and simulation of 6T SRAM cell.
+The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology. 
+Here according to the row and column address one of the wordline and one of the column will get selected, which will give access to one of the 6T cell in the respective column. For this 6T cell we did the simulation for read, write operation, checked the noise margin in Hold, Read and Write states.
 
+
+---
+## SRAM_Array_and_Peripheral_Circuits
 
 ![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png)
 
 
-This project mainly focuses on the design and simulation of 6T SRAM cell.
-The total memory size for the design is 1K x 32 bit, and the technology used is 0.5um SCMOS Technology. 
-Here according to the row and column address one of the wordline and one of the column will get selected, which will give access to one of the 6T cell in the respective column. For thid 6T cell we did the simulation for read, write operation, checked the noise margin in Hold, Read and Write states.
+At a very basic level SRAM Architecture consists of Bit Cell Array, Precharge circuit, Sense amplifier, Column Decoder, Write Driver, Wordline Driver and Row Decoder. The Row and Column addresses will be feed into the Row and Column Decoders respectively. Then according to the address feed, one of the Wordline and one of the Bitline will get selected, means one of the 6T cell in the Bit Cell Array will get selected. There after according to the signal in the Read Enable (REN) and Write Enable (WEN) we can access data from the cell or feed data into the cell.
+
 
 ---
 ## Design_of_6T_Cell
@@ -47,7 +52,7 @@ Transistor Region of Operation:
 The data read operation should not destroy the stored information.
 
 The key design issue for the data-read operation is to guarantee that the voltage V1, does not exceed the threshold voltage of M2 so that the transistor M2 remains turned off during the read phase, i.e., V1 ≤ Vtn.
-Now to maintain the stored data and considering the design constraint we can say that M1 should be stronger than M3.
+Now to maintain the stored data and considering the design constraint we can say that **M1 should be stronger than M3**.
 
 After solving the Id equation for M1 and M3 we get (Eq 1):
 ![Eq-1](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-1.jpeg)
@@ -72,14 +77,14 @@ Transistor Region of Operation:
 The cell should allow modification of the stored information.
 To change the stored information, i.e., to force V1 to 0 V, and V2 to Vdd, the
 node voltage V1, must be reduced below  the threshold voltage of M2 so that M2 turns off first.
-Now to modify the stored data and considering the design constraint we can say that M3 should be stronger than M5.
+Now to modify the stored data and considering the design constraint we can say that **M3 should be stronger than M5**.
 After solving the Id equation for M3 and M5 we get (Eq-2):
 ![Eq-2](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/images/Eq-2.jpeg)
 
 For sizing data [click here](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/docs/6T_sizing.pdf).
 
 ---
-## DC_Analysis_of_6T_Cell
+## 6T_SRAM_Stability
 The stability and writability of the cell is addressed by the:
  - Hold Margin
  - Read Margin
@@ -95,51 +100,53 @@ The stability and writability of the cell is addressed by the:
 
 ![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new2.jpeg)
 
+The above diagram contains the schematic and plot of the SRAM cell in Hold Mode.
+Hold SNM is the side of the largest square nested inside the butterfly curve.
 
 ### Read_SNM
 
 ![Schematic for RSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/RSNM_new.jpeg)
 
 
+The above diagram contains the schematic and plot of the SRAM cell in Read Mode. 
+Read SNM is the side of the largest square nested inside the butterfly curve. 
+Read SNM is smaller than the Hold SNM because low level is raised by the access transistors.
+
 ### Write_SNM
 
 ![Schematic for WSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/WSNM_new.jpeg)
 
+The above diagram contains the schematic and plot of the SRAM cell in Write Mode. 
+Write SNM is side of the square that can fit between two curves as shown above.
 
 ---
-## Transient_Analysis
+## SRAM_Timing_Analysis
 
-![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/6T-cell_parasitics_new.jpeg)
+![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran.jpeg)
 
-The above circuit consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
+The above circuit diagram consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
 Here for M12 and M13  m=255. 
 For M10 and M11 m=127.
 
 
-![Transient simulation with all parasitics.](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_with_parasitics.jpeg)   
+
+---
+## Timing_Analysis_with_Sense_Amplifier
+
+![sense_amplifier](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_sense.jpeg)
+
+The above diagram contains the schematic and plot of the SRAM cell with [sense amplifier circuit](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/sense_amp.jpeg). 
+Sense Amplifier is a differential amplifier used to sense the voltage difference between the bit-lines of a memory cell while a read operation is performed. It is needed in the circuit because the 6T-cell as being small sized not able to drive the large load capacitance appearing at the bit lines.
 
 
 ---
-## Sense_Amplifier
+## Timing_Analysis_with_ Write_Driver
 
-![sense_amplifier](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/sense_amp.jpeg)
-
-It is a differential amplifier used to sense the voltage difference between the bit-lines of a memory cell while a read operation is performed. It is needed in the circuit because the 6T-cell as being small sized not able to drive the large load capacitance appearing at the bit lines.
+![Write Driver](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_write.jpeg)
 
 
-![tran_sense_amp](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_sense_amp.jpeg)
-
-
----
-## Write_Driver
-
-![Write Driver](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_driver.jpeg)
-
-
+The above diagram contains the schematic and plot of the SRAM cell with sense amplifier and [write driver circuit](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_driver.jpeg).
 The write drivers send the input data signals onto the bit-lines for a write operation.
-
-
-![Transient analysis with sense amplifier and write driver.](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_write_driver.jpeg)
 
 
 ---
