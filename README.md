@@ -2,17 +2,17 @@
 #  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
- - [SRAM Array and Peripheral circuits](#SRAM_Array_and_Peripheral_Circuits)
- - [Design of 6T cell](#Design_of_6T_Cell)
- - [DC Analysis 6T cell](#6T_SRAM_Stability)
-     - [Hold SNM](#Hold_SNM)
-     - [Read SNM](#Read_SNM)
-     - [Write SNM](#Write_SNM)
- - [SRAM Timing  Analysis](#SRAM_Timing_Analysis)
- - [Timing Analysis with Sense Amplifier](#Timing_Analysis_with_Sense_Amplifier)
- - [Timing Analysis with Write Driver](#Timing_Analysis_with_Write_Driver)
+ - [SRAM Array and Peripheral circuits](#SRAM-Array-and-Peripheral-Circuits)
+ - [Design of 6T cell](#Design-of-6T-Cell)
+ - [DC Analysis 6T cell](#6T-SRAM-Stability)
+     - [Hold SNM](#Hold-SNM)
+     - [Read SNM](#Read-SNM)
+     - [Write SNM](#Write-SNM)
+ - [SRAM Timing  Analysis](#SRAM-Timing-Analysis)
+ - [Timing Analysis with Sense Amplifier](#Timing-Analysis-with-Sense-Amplifier)
+ - [Timing Analysis with Write Driver](#Timing-Analysis-with-Write-Driver)
  - [Acknowledgments](#Acknowledgements)
- - [Contact Information](#Contact_Information)
+ - [Contact Information](#Contact-Information)
  
 ---
 ## Overview
@@ -26,7 +26,7 @@ This project mainly focuses on the design and simulation of 6T SRAM cell.
 
 
 ---
-## SRAM_Array_and_Peripheral_Circuits
+## SRAM Array and Peripheral Circuits
 
 ![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png)
 
@@ -35,7 +35,7 @@ At a very basic level SRAM Architecture consists of Bit Cell Array, Precharge ci
 
 
 ---
-## Design_of_6T_Cell
+## Design of 6T Cell
 6T cell consists of two back to back connected inverters and two access transistors. For the design of 6T cell first we need to understand the operation and behaviour of the 6 transistors involved in the design. 
  1. Read Operation
  2. Write Operation
@@ -89,7 +89,7 @@ After solving the Id equation for M3 and M5 we get (Eq-2):
 For sizing data [click here](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/docs/6T_sizing.pdf).
 
 ---
-## 6T_SRAM_Stability
+## 6T SRAM Stability
 The stability and writability of the cell is addressed by the:
  - Hold Margin
  - Read Margin
@@ -101,7 +101,7 @@ The stability and writability of the cell is addressed by the:
  
 [SNM Reference paper ](https://github.com/gautam19499/6-T-SRAM-cell-design/blob/main/docs/SNM.pdf).
 
-### Hold_SNM
+### Hold SNM
 
 ![schematic for HSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/HSNM_new2.jpeg)
 
@@ -109,7 +109,7 @@ The above diagram contains the schematic and plot of the SRAM cell in Hold Mode.
 
 Hold SNM is the side of the largest square nested inside the butterfly curve.
 
-### Read_SNM
+### Read SNM
 
 ![Schematic for RSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/RSNM_new.jpeg)
 
@@ -120,7 +120,7 @@ Read SNM is the side of the largest square nested inside the butterfly curve.
 
 Read SNM is smaller than the Hold SNM because low level is raised by the access transistors.
 
-### Write_SNM
+### Write SNM
 
 ![Schematic for WSNM](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/WSNM_new.jpeg)
 
@@ -128,7 +128,7 @@ The above diagram contains the schematic and plot of the SRAM cell in Write Mode
 Write SNM is side of the square that can fit between two curves as shown above.
 
 ---
-## SRAM_Timing_Analysis
+## SRAM Timing Analysis
 
 ![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran.jpeg)
 
@@ -139,7 +139,7 @@ For M10 and M11 m=127.
 
 
 ---
-## Timing_Analysis_with_Sense_Amplifier
+## Timing Analysis with Sense Amplifier
 
 ![sense_amplifier](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_sense.jpeg)
 
@@ -149,7 +149,7 @@ Sense Amplifier is a differential amplifier used to sense the voltage difference
 
 
 ---
-## Timing_Analysis_with_ Write_Driver
+## Timing Analysis with Write Driver
 
 ![Write Driver](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran_write.jpeg)
 
@@ -165,7 +165,7 @@ The write drivers send the input data signals onto the bit-lines for a write ope
 -   Mr.Santunu Sarangi,Assistant Professor,Silicon Institute Of Technology,Bhubaneswar
 
 ---
-## Contact_Information
+## Contact Information
 
  - Gautam Kumar, Design Engineer, [Sevya Multimedia Technologies Pvt. Ltd.](https://sevyamultimedia.com/)
  - gautamkumar99342@gmail.com
