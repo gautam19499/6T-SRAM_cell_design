@@ -46,7 +46,7 @@ At a very basic level SRAM Architecture consists of Bit Cell Array, Precharge ci
 
 ![read_operation](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/read_operation-Page-1.jpg)
 
-![alt-text-1](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/read_operation-Page-1.jpg "title-1") ![alt-text-2](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_operation-Page-2.jpg "title-2")
+<--- ![alt-text-1](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/read_operation-Page-1.jpg "title-1") ![alt-text-2](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/write_operation-Page-2.jpg "title-2") --->
 
 Assuming logic 0 is stored in the cell i.e, V1=0V & V2=5V.
 Transistor Region of Operation:
