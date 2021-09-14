@@ -31,7 +31,7 @@ This project mainly focuses on the design and simulation of 6T SRAM cell.
 ![SRAM Block Diagram](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png)
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png/460/300">
+  <img width="1000" height="1000" src="https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png">
 </p>
 
 
