@@ -28,7 +28,7 @@ This project mainly focuses on the design and simulation of 6T SRAM cell.
 ---
 ## SRAM Array and Peripheral Circuits
 
-<!-- <p align="center"> <img width="700" height="595" src="https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png"> </p> >
+<p align="center"> <img width="700" height="595" src="https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/block_diagram_new2.png"> </p>
 
 <!-- The above syntax is not working well in mobile that's why can't use it. >
 
