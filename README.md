@@ -136,7 +136,7 @@ Write SNM is side of the square that can fit between two curves as shown above.
 
 ![6T-cell with all parasitics](https://github.com/gautam19499/6T-SRAM_cell_design/blob/main/images/tran.jpeg)
 
-The above circuit diagram consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32000 cells), so there will be 128 number of wordlines and 256 columns.
+The above circuit diagram consists of 6T-cell with all its parasitics and precharge circuit. Since the memory size is 1k * 32 bit  (i.e., 32768 cells), so there will be 128 number of wordlines and 256 columns.
 Here for M12 and M13  m=255. 
 For M10 and M11 m=127.
 
