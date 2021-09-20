@@ -36,7 +36,7 @@ This project mainly focuses on the design and simulation of 6T SRAM cell.
 
 
 
-At a very basic level SRAM Architecture consists of Bit Cell Array, Precharge circuit, Sense amplifier, Column Decoder, Write Driver, Wordline Driver and Row Decoder. The Row and Column addresses will be feed into the Row and Column Decoders respectively. Then according to the address feed, one of the Wordline and one of the Bitline will get selected, means one of the 6T cell in the Bit Cell Array will get selected. There after according to the signal in the Read Enable (REN) and Write Enable (WEN) we can access data from the cell or feed data into the cell.
+At a very basic level SRAM architecture consists of Bit Cell Array, Precharge Circuit, Sense Amplifier, Column Decoder, Write Driver, Wordline Driver and Row Decoder. The Row and Column addresses will be feed into the Row and Column Decoders respectively. Then according to the address feed, one of the wordline and one of the bitline will get selected, means one of the 6T cell in the Bit Cell Array will get selected. There after according to the signal in the Read Enable (REN) and Write Enable (WEN) we can access data from the cell or feed data into the cell.
 
 
 ---
