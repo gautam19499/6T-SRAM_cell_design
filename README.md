@@ -16,6 +16,9 @@
  
 ---
 ## Overview
+SRAM (Static RAM) is random access memory (RAM) that retains data bits in its memory as long as power is being supplied. SRAM is almost used practically in all modern electronic appliances and computers etc.
+A typical SRAM cell is made up of six MOSFETs. Each bit in an SRAM is stored on four transistors  that form two cross-coupled inverters. This storage cell has two stable states which are used to denote **0** and **1**. Two additional access transistors serve to control the access to a storage cell during read and write operations. In addition to such six-transistor (6T) SRAM, other kinds of SRAM chips use 4, 8, 10 (4T, 8T, 10T SRAM), or more transistors per bit.
+
 This project mainly focuses on the design and simulation of 6T SRAM cell.
 
  Specifications:
