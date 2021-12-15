@@ -1,4 +1,3 @@
-
 #  Design and Simulation of 6T- SRAM cell design. 
 ## Table Of Contents :
  - [Overview](#Overview)
